@@ -1,7 +1,11 @@
 <template>
-    <div :style="cssVars" class='px-14 pt-4'>
-        <Navbar :data="data" :currentRoute="currentRoute" />
-        <router-view :data="data" />
+    <div :style="cssVars" class="px-14 pt-4">
+        <Navbar :data="data" />
+        <router-view :data="data" v-slot="{ Component }">
+            <transition name="fade">
+                <component :is="Component" />
+            </transition>
+        </router-view>
     </div>
 </template>
 
@@ -16,6 +20,7 @@ export default {
         return {
             currentRoute: window.location.pathname,
             data: {
+                transitionName: "fade",
                 primaryColor: "#FBBF24",
                 name: "Mehrab",
                 full_name: "Mehrab Hojjati Pour",
@@ -65,5 +70,14 @@ export default {
     font-family: Avenir, Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity 0.3s ease-out;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+    opacity: 0;
 }
 </style>
