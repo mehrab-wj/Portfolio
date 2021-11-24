@@ -54,17 +54,21 @@
                     <label> Happy clients</label>
                 </div>
             </div>
+
+            <div class='mt-14'> <ProjectsList /> </div>
         </div>
     </section>
 </template>
 
 <script>
+import ProjectsList from "../components/ProjectsList";
+
 export default {
     name: "Projects",
     props: {
         data: Object,
     },
-    components: {},
+    components: { ProjectsList },
     created() {
         this.data.primaryColor = "#60A5FA";
     },

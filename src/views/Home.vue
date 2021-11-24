@@ -31,28 +31,21 @@
                 </router-link>
             </div>
             <div class="mt-8">
-                <h2 class="text-3xl font-black">Latest Projects</h2>
-
-                <div class="projects-area z-30" v-dragscroll>
-                    <img src="/img/example-work.jpg" alt="Example work" />
-                    <img src="/img/example-work.jpg" alt="Example work" />
-                    <img src="/img/example-work.jpg" alt="Example work" />
-                    <img src="/img/example-work.jpg" alt="Example work" />
-                    <img src="/img/example-work.jpg" alt="Example work" />
-                </div>
-                <a href="#" class="view-more">view more</a>
+                <ProjectsList viewMoreBtn='true' />
             </div>
         </div>
     </section>
 </template>
 
 <script>
+import ProjectsList from '../components/ProjectsList.vue';
+
 export default {
     name: "Home",
     props: {
         data: Object,
     },
-    components: {},
+    components: { ProjectsList },
     created() {
         this.data.primaryColor = "#FBBF24";
     },
@@ -67,16 +60,6 @@ button.aboutMe:hover {
     @apply shadow-sm;
     color: var(--primary-color);
     border-color: var(--primary-color);
-}
-.projects-area {
-    @apply mt-6 flex flex-nowrap space-x-6 overflow-hidden;
-}
-.projects-area img {
-    @apply w-48 h-40 rounded-2xl;
-}
-a.view-more {
-    @apply block text-sm my-4 ml-1;
-    color: var(--primary-color);
 }
 .-z-1 {
     z-index: -1;
