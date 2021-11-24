@@ -1,5 +1,5 @@
 <template>
-    <div :style="cssVars">
+    <div :style="cssVars" class='px-14 pt-4'>
         <Navbar :data="data" :currentRoute="currentRoute" />
         <router-view :data="data" />
     </div>

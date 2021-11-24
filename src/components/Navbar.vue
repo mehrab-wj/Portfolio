@@ -1,5 +1,5 @@
 <template>
-    <nav class="flex justify-between pt-4 px-14 items-baseline z-50">
+    <nav class="flex justify-between items-baseline z-50">
         <h1 class="font-bold text-xl">
             {{ this.data.name
             }}<label class="text-3xl">.</label>

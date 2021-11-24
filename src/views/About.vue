@@ -1,14 +1,19 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
-  </div>
+  <section class="grid grid-cols-2 gap-6 pt-20">
+    <Timeline />
+  </section>
 </template>
 
 <script>
+import Timeline from '../components/Timeline.vue';
+
 export default {
   name: "About",
   props: {
     data: Object
+  },
+  components: {
+    Timeline
   },
   created() {
     this.data.primaryColor = "#34D399";
