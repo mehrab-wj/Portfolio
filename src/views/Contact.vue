@@ -12,7 +12,7 @@ export default {
     },
     components: {},
     created() {
-        this.data.primaryColor = "#818CF8";
+        this.data.primaryColor = "#A78BFA";
     },
     watch: {
         $route(to, from) {
