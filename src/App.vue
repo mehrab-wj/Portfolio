@@ -1,5 +1,5 @@
 <template>
-    <Navbar :data="data" />
+    <Navbar :data="data" :currentRoute="currentRoute" />
     <router-view :data="data" />
 </template>
 
@@ -12,9 +12,11 @@ export default {
     },
     data() {
         return {
+            currentRoute: window.location.pathname,
             data: {
                 name: "Mehrab",
                 full_name: "Mehrab Hojjati Pour",
+                role: "Full-stack Developer",
                 social: [
                     {
                         key: "instagram",

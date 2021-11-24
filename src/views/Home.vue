@@ -1,11 +1,16 @@
 <template>
-    <section class="px-4 pt-16 grid grid-cols-2 gap-6">
+    <img
+        class="absolute right-0 top-0 z-0"
+        src="/img/cubic.png"
+    />
+    <section class="px-14 pt-20 grid grid-cols-2 gap-6">
         <div class="pr-5 relative">
             <img
                 class="ml-auto"
                 src="/img/self.png"
                 alt="{{ this.data.full_name }}"
             />
+        <h3 class='absolute bottom-14 opacity-10 font-black text-6xl z-10'>{{ this.data.role }}</h3>
         </div>
         <div class="pr-5">
             <div>
@@ -31,7 +36,7 @@
             <div class='mt-8'>
               <h1 class="text-3xl font-black">Latest Projects</h1>
 
-              <div class='projects-area' v-dragscroll>
+              <div class='projects-area z-30' v-dragscroll>
                 <img src="/img/example-work.jpg" alt="Example work">
                 <img src="/img/example-work.jpg" alt="Example work">
                 <img src="/img/example-work.jpg" alt="Example work">
