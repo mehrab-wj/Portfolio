@@ -7,7 +7,7 @@
                 src="/img/self.png"
                 alt="{{ this.data.full_name }}"
             />
-            <h3 class="absolute bottom-14 opacity-10 font-black text-6xl -z-1">
+            <h3 class="absolute bottom-14 opacity-10 font-black text-6xl z-1">
                 {{ this.data.role }}
             </h3>
         </div>
@@ -22,10 +22,8 @@
                 </p>
 
                 <p class="mt-6 w-8/12">
-                    I'm a full-stack developer with more focused on Back-end I
-                    have more than 7 years of experience in many different
-                    languages Love to create new things and make customers happy
-                    :)
+                    Lorem ipsum is placeholder text commonly used in the
+                    graphic, print, and publishing industries for previewing.
                 </p>
 
                 <router-link to="/about">
@@ -56,8 +54,8 @@ export default {
     },
     components: {},
     created() {
-      this.data.primaryColor = "#FBBF24";
-    }
+        this.data.primaryColor = "#FBBF24";
+    },
 };
 </script>
 

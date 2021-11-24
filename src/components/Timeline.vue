@@ -1,5 +1,5 @@
 <template>
-    <div class='overflow-y-hidden h-5/6'  v-dragscroll>
+    <div class='overflow-y-hidden cursor-move' style='height: 36rem'  v-dragscroll>
         <div class="timeline">
             <div :key="index" v-for="index in 3" class="timeline-container primary">
                 <div class="timeline-icon">
