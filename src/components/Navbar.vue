@@ -2,7 +2,7 @@
     <nav class="flex justify-between pt-4 px-14 items-baseline z-50">
         <h1 class="font-bold text-xl">
             {{ this.data.name
-            }}<label class="text-yellow-400 text-3xl">.</label>
+            }}<label class="text-3xl">.</label>
         </h1>
 
         <ul class="flex space-x-10">
@@ -38,10 +38,14 @@ export default {
 </script>
 
 <style lang="postcss" scoped>
-nav ul li a {
-    @apply cursor-pointer pb-1 hover:text-yellow-400 border-b-2 border-transparent hover:border-yellow-400 transition duration-200;
+nav h3 label {
+    color: var(--primary-color);
 }
-nav ul li a.router-link-active, nav ul li a.router-link-exact-activ {
-    @apply text-yellow-400 border-yellow-400;
+nav ul li a {
+    @apply cursor-pointer pb-1 border-b-2 border-transparent transition duration-200;
+}
+nav ul li a:hover, nav ul li a.router-link-active, nav ul li a.router-link-exact-activ {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
 }
 </style>

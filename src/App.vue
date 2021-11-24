@@ -1,6 +1,8 @@
 <template>
-    <Navbar :data="data" :currentRoute="currentRoute" />
-    <router-view :data="data" />
+    <div :style="cssVars">
+        <Navbar :data="data" :currentRoute="currentRoute" />
+        <router-view :data="data" />
+    </div>
 </template>
 
 <script>
@@ -14,6 +16,7 @@ export default {
         return {
             currentRoute: window.location.pathname,
             data: {
+                primaryColor: "#FBBF24",
                 name: "Mehrab",
                 full_name: "Mehrab Hojjati Pour",
                 role: "Full-stack Developer",
@@ -46,6 +49,13 @@ export default {
                 ],
             },
         };
+    },
+    computed: {
+        cssVars() {
+            return {
+                "--primary-color": this.data.primaryColor,
+            };
+        },
     },
 };
 </script>
