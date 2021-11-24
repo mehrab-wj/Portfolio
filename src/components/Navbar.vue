@@ -7,7 +7,7 @@
         <ul class="flex space-x-10">
             <li><router-link to="/">Portfolio</router-link></li>
             <li><router-link to="/about">About me</router-link></li>
-            <li><router-link to="/projects">Skills</router-link></li>
+            <li><router-link to="/projects">Projects overview</router-link></li>
             <li><router-link to="/contact-me">Contact me</router-link></li>
         </ul>
 

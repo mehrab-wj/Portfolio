@@ -31,7 +31,7 @@
                 </router-link>
             </div>
             <div class="mt-8">
-                <h1 class="text-3xl font-black">Latest Projects</h1>
+                <h2 class="text-3xl font-black">Latest Projects</h2>
 
                 <div class="projects-area z-30" v-dragscroll>
                     <img src="/img/example-work.jpg" alt="Example work" />
