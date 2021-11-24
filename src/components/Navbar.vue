@@ -38,7 +38,7 @@ export default {
 </script>
 
 <style lang="postcss" scoped>
-nav h3 label {
+nav h1 label {
     color: var(--primary-color);
 }
 nav ul li a {

@@ -55,7 +55,9 @@ export default {
         data: Object,
     },
     components: {},
-    computed: {},
+    created() {
+      this.data.primaryColor = "#FBBF24";
+    }
 };
 </script>
 
