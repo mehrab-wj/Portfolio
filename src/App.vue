@@ -17,6 +17,18 @@ export default {
     components: {
         Navbar,
     },
+    async beforeCreate() {
+        fetch(
+            "/api?_fields=name,description,url,site_logo"
+        )
+            .then((response) => response.json())
+            .then((data) => {
+                this.data.name = data.name;
+                this.data.tag_line = data.description;
+                document.title =
+                    this.data.full_name + " | " + this.data.tag_line;
+            });
+    },
     data() {
         return {
             currentRoute: window.location.pathname,
@@ -24,6 +36,8 @@ export default {
                 primaryColor: "#FBBF24",
                 name: "Mehrab",
                 full_name: "Mehrab Hojjati Pour",
+                tag_line: "Loading ...",
+                description: "Loading ...",
                 role: "Full-stack Developer",
                 social: [
                     {
@@ -81,17 +95,17 @@ export default {
     opacity: 0;
 }
 .slide-fade-enter-active {
-  transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
 }
 
 .slide-fade-leave-active {
-  transition: all 0.2s cubic-bezier(1, 0.5, 0.8, 1);
+    transition: all 0.2s cubic-bezier(1, 0.5, 0.8, 1);
 }
 
 .slide-fade-enter-from,
 .slide-fade-leave-to {
-  transform: translateY(-20px);
-  opacity: 0;
+    transform: translateY(-20px);
+    opacity: 0;
 }
 .-z-1 {
     z-index: -1;

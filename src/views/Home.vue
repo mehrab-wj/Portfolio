@@ -4,7 +4,7 @@
             <img
                 class="ml-auto hidden md:block -z-1"
                 src="/img/self.png"
-                alt="{{ this.data.full_name }}"
+                :alt="this.data.full_name"
             />
             <h3 class="hidden md:block absolute lg:bottom-14 opacity-10 font-black text-6xl -z-1">
                 {{ this.data.role }}
