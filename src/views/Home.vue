@@ -1,26 +1,26 @@
 <template>
-    <section class="px-14 pt-20 grid grid-cols-2 gap-6">
-        <div class="pr-5 relative">
+    <section class="md:px-14 pt-20 grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="md:pr-5 relative">
             <img
-                class="ml-auto"
+                class="ml-auto hidden md:block -z-1"
                 src="/img/self.png"
                 alt="{{ this.data.full_name }}"
             />
-            <h3 class="absolute bottom-14 opacity-10 font-black text-6xl z-1">
+            <h3 class="hidden md:block absolute lg:bottom-14 opacity-10 font-black text-6xl -z-1">
                 {{ this.data.role }}
             </h3>
         </div>
-        <div class="pr-5">
+        <div class="md:pr-5">
             <div>
                 <h1 class="text-3xl font-black">{{ this.data.full_name }}</h1>
-                <p class="mt-8 w-8/12">
+                <p class="mt-8 md:w-8/12">
                     I'm a full-stack developer with more focused on Back-end I
                     have more than 7 years of experience in many different
                     languages Love to create new things and make customers happy
                     :)
                 </p>
 
-                <p class="mt-6 w-8/12">
+                <p class="mt-6 md:w-8/12">
                     Lorem ipsum is placeholder text commonly used in the
                     graphic, print, and publishing industries for previewing.
                 </p>
