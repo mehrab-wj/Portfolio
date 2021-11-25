@@ -15,16 +15,16 @@
             <ul
                 :class="
                     menuOpen
-                        ? 'w-full text-center space-y-3'
+                        ? 'w-full text-center space-y-4'
                         : 'flex space-x-4 lg:space-x-10 mx-auto'
                 "
             >
-                <li><router-link to="/">Portfolio</router-link></li>
-                <li><router-link to="/about">About me</router-link></li>
-                <li>
+                <li @click="toggleMenu(true)"><router-link to="/">Portfolio</router-link></li>
+                <li @click="toggleMenu(true)"><router-link to="/about">About me</router-link></li>
+                <li @click="toggleMenu(true)">
                     <router-link to="/projects">Projects overview</router-link>
                 </li>
-                <li><router-link to="/contact-me">Contact me</router-link></li>
+                <li @click="toggleMenu(true)"><router-link to="/contact-me">Contact me</router-link></li>
             </ul>
 
             <div
@@ -47,8 +47,8 @@
             </div>
         </div>
 
-        <button @click="toggleMenu" class="text-2xl md:hidden">
-            <i class="fas fa-braille"></i>
+        <button id='mobileMenuBtn' @click="toggleMenu()" class="text-2xl md:hidden transition duration-500">
+            <i :class="mobileMenuIcon"></i>
         </button>
     </nav>
 </template>
@@ -60,20 +60,33 @@ export default {
     data() {
         return {
             menuOpen: false,
+            mobileMenuIcon: "fas fa-bars"
         };
     },
     methods: {
-        toggleMenu() {
-            this.menuOpen = !this.menuOpen;
+        toggleMenu(forceClose = false) {
+            this.menuOpen = (forceClose ? false : !this.menuOpen);
+            if (this.menuOpen) {
+                this.mobileMenuIcon = 'fas fa-times opacity-20';
+                document.querySelector("#mobileMenuBtn").style.transform = "rotate(360deg)";
+                return;
+            }
+            this.mobileMenuIcon = 'fas fa-bars';
+            document.querySelector("#mobileMenuBtn").style.transform = "rotate(0deg)";
         },
+        
     },
     computed: {},
 };
 </script>
 
 <style lang="postcss" scoped>
+.rotate-center {
+	-webkit-animation: rotate-center 0.4s ease-in-out both;
+	        animation: rotate-center 0.4s ease-in-out both;
+}
 nav h1 label,
-.fa-braille {
+.fa-bars {
     color: var(--primary-color);
 }
 nav ul li a {
@@ -85,4 +98,25 @@ nav ul li a.router-link-exact-activ {
     color: var(--primary-color);
     border-color: var(--primary-color);
 }
+@-webkit-keyframes rotate-center {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes rotate-center {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
 </style>
