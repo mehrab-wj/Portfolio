@@ -1,5 +1,4 @@
 <template>
-    <img class="absolute right-0 top-0 -z-1" src="/img/cubic.png" />
     <section class="px-14 pt-20 grid grid-cols-2 gap-6">
         <div class="pr-5 relative">
             <img
@@ -31,7 +30,7 @@
                 </router-link>
             </div>
             <div class="mt-8">
-                <ProjectsList viewMoreBtn='true' />
+                <ProjectsList :viewMoreBtn=true />
             </div>
         </div>
     </section>
@@ -60,8 +59,5 @@ button.aboutMe:hover {
     @apply shadow-sm;
     color: var(--primary-color);
     border-color: var(--primary-color);
-}
-.-z-1 {
-    z-index: -1;
 }
 </style>

@@ -1,6 +1,7 @@
 <template>
     <div :style="cssVars" class="px-14 pt-4">
         <Navbar :data="data" />
+        <img class="absolute right-0 top-0 -z-1" src="/img/cubic.png" />
         <router-view :data="data" v-slot="{ Component }">
             <transition name="fade">
                 <component :is="Component" />
@@ -79,5 +80,8 @@ export default {
 .fade-enter-from,
 .fade-leave-to {
     opacity: 0;
+}
+.-z-1 {
+    z-index: -1;
 }
 </style>
