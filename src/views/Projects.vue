@@ -1,6 +1,6 @@
 <template>
     <section class="grid grid-cols-1 md:grid-cols-5 gap-4 pt-20">
-        <div class="flex flex-nowrap overflow-y-auto space-x-4 md:block md:col-span-2">
+        <div class="flex flex-nowrap overflow-y-auto space-x-4 md:space-x-0 md:block md:col-span-2">
             <div class="category active">
                 <div class="category-circle">
                     <i class="fal fa-laptop-code"></i>
