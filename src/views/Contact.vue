@@ -1,13 +1,13 @@
 <template>
-    <section class="pt-20 grid grid-cols-12">
-        <div class="text-center col-span-8">
-            <h2 class="font-black text-5xl">
+    <section class="pt-20 grid grid-cols-1 md:grid-cols-12">
+        <div class="text-center col-span-1 md:col-span-8">
+            <h2 class="font-black text-2xl md:text-4xl lg:text-5xl">
                 Let's make something
                 <br />
                 <label>Amazing</label> togheder<label>.</label>
             </h2>
 
-            <form action="javascript:void(0)" class="mt-12 inline-block w-8/12">
+            <form action="javascript:void(0)" class="mt-12 inline-block w-full md:w-8/12">
                 <input
                     type="text"
                     name="full_name"
@@ -26,8 +26,8 @@
                 <button>Submit!</button>
             </form>
         </div>
-        <div class="col-span-4">
-            <h2 class="font-black text-5xl mb-12">
+        <div class="md:col-span-4">
+            <h2 class="font-black text-2xl md:text-4xl lg:text-5xl mb-12 mt-8 md:mt-0">
                 Reach me
                 <br />
                 Faster
