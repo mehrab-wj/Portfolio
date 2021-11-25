@@ -1,5 +1,5 @@
 <template>
-    <section class="pt-20 grid grid-cols-1 md:grid-cols-12">
+    <section class="pt-20 grid grid-cols-1 md:grid-cols-12 pb-6">
         <div class="text-center col-span-1 md:col-span-8">
             <h2 class="font-black text-2xl md:text-4xl lg:text-5xl">
                 Let's make something
