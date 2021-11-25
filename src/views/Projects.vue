@@ -1,6 +1,6 @@
 <template>
-    <section class="grid grid-cols-5 gap-4 pt-20">
-        <div class="col-span-2">
+    <section class="grid grid-cols-1 md:grid-cols-5 gap-4 pt-20">
+        <div class="flex flex-nowrap overflow-y-auto space-x-4 md:block md:col-span-2">
             <div class="category active">
                 <div class="category-circle">
                     <i class="fal fa-laptop-code"></i>
@@ -32,7 +32,7 @@
                 </div>
             </div>
         </div>
-        <div class="pl-8 col-span-3">
+        <div class="md:pl-8 md:col-span-3">
             <h2 class="text-3xl font-black">Back-end development</h2>
             <p class="mt-6">
                 Lorem ipsum is placeholder text commonly used in the graphic,
